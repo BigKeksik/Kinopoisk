@@ -1,0 +1,90 @@
+.container:hover .subtitleLinkArrow{
+    opacity: .7;
+}
+
+.header {
+    margin: 20px 0 0 50px;
+}
+
+.subtitleLink {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+.subtitle {
+    margin: 7px 5px 10px;
+}
+
+.subtitleLinkArrow {
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    transition: opacity .2s ease;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+}
+
+.content:hover .buttonLeft {
+    opacity: 1;
+}
+
+.content:hover .buttonRight {
+    opacity: 1;
+}
+
+.list {
+    display: flex;
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+    scroll-snap-type: x mandatory;
+}
+
+.list::before {
+    content: '';
+    padding: 0 30px;
+}
+
+.list::after {
+    content: '';
+    padding: 0 30px;
+}
+
+.element {
+    float: left;
+}
+
+.buttonLeft {
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    z-index: 4;
+    outline: none;
+    transition: opacity .2s ease;
+}
+
+.buttonRight {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    width: 60px;
+    height: 100%;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    z-index: 4;
+    outline: none;
+    transition: opacity .2s ease;
+}

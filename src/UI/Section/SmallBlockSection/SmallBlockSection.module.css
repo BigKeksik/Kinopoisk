@@ -1,0 +1,176 @@
+.previewContainer {
+    position: relative;
+    border-bottom: 1px solid rgba(128, 128, 128, .2);
+    border-top: 1px solid rgba(128, 128, 128, .2);
+    height: 660px;
+}
+
+.background {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.backgroundColor {
+    width: 40%;
+    height: 100%;
+    background: black;
+}
+
+
+.backgroundGradient {
+    width: 60%;
+    background: linear-gradient(90deg,rgba(0,0,0,1),rgba(0,0,0,.95) 6.67%,rgba(0,0,0,.886) 13.33%,rgba(0,0,0,.767) 20%,rgba(0,0,0,.641) 26.67%,rgba(0,0,0,.407) 33.33%,rgba(0,0,0,.267) 40%,rgba(0,0,0,.223) 46.67%,rgba(0,0,0,.177) 53.33%,rgba(0,0,0,.133) 60%,rgba(0,0,0,.093) 66.67%,rgba(0,0,0,.059) 73.33%,rgba(0,0,0,.033) 80%,rgba(0,0,0,.014) 86.67%,rgba(0,0,0,.003) 93.33%,rgba(0,0,0,.00004));
+    z-index: 10;
+}
+
+.backgroundImage {
+    position: absolute;
+    left: 40%;
+    z-index: 9;
+    transition: opacity 1s ease;
+}
+
+.backgroundVideo {
+    position: absolute;
+    left: 40%;
+}
+
+.setVideo {
+    z-index: 1;
+    transition: opacity 2s ease;
+}
+
+.video {
+    z-index: 1;
+}
+
+.noneVideo {
+    background-color: rgb(0,0,0);
+    transition: opacity 2s ease;
+    z-index: 8;
+}
+
+.previewContent {
+
+}
+
+.previewButtonBlock {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.previewButton {
+    font-size: 17px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.previewActiveButton {
+    color: white;
+    background: rgb(30,30,30);
+}
+
+.previewInactiveButton {
+    color: rgba(255, 255, 255, .5);
+    background: none;
+    transition: color .4s ease;
+}
+
+.previewInactiveButton:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.textButton {
+    margin: 10px 20px;
+}
+
+.previewCloseButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: none;
+    fill: rgba(230, 230, 230, 0.9);
+    scale: .7;
+    transition: fill .4s ease;
+    cursor: pointer;
+}
+
+.previewCloseButton:hover {
+    fill: rgba(230, 230, 230, 1);
+}
+
+.previewInfoBlock {
+    width: 32%;
+    /* border: 1px solid green; */
+    margin: 20px 30px;
+}
+
+.previewImageBlock {
+    display: flex;
+    width: 100%;   
+}
+
+.previewImage {
+    width: 380px;
+    margin: 0;
+}
+
+.previewShortInfoBlock {
+    color: rgb(153,153,153);
+    margin: 20px 0 0;
+}
+
+.previewShortInfoFirstBlock {
+    display: flex;
+    flex-direction: row;
+}
+
+.previewShortInfoAudioBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px 0 0;
+}
+
+.voiceImage {
+    /* scale: .7; */
+    margin: 0 15px 0 0;
+}
+
+.ratingText {
+    margin: 0 15px 0 0;
+    font-weight: 600;
+    opacity: .9;
+}
+
+.text {
+    margin: 0 15px 0 0;
+}
+
+.previewDescription {
+    font-size: 25px;
+}
+
+.previewInfoButtonBlock {
+    display: flex;
+    flex-direction: row;
+}
+
+.opacity_0 {
+    opacity: 0;
+}
+
+.opacity_1 {
+    opacity: 1;
+}
+

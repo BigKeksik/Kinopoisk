@@ -1,0 +1,154 @@
+.container {
+    display: flex;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    z-index: 1000;
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, 0));
+}
+
+.contextMenu {
+    display: flex;
+    margin: 0 0 0 65px;
+    align-items: center;
+}
+
+.burger {
+    margin: 0 28px 0 0;
+    height: 28px;
+}
+
+.logo {
+    height: 42px;
+    cursor: pointer;
+}
+
+.buttonBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navMenu {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.button {
+    display: block;
+    float: left;
+    margin: 0 20px;
+}
+
+.buttonText {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+    color: #b6b5b1;
+    cursor: pointer;
+    transition: color 0.2s ease-out;
+}
+
+.buttonText:hover {
+    color: rgb(255, 255, 255);
+    fill: rgb(255, 255, 255);
+}
+
+.search {
+    width: 28px;
+    height: 28px;
+    fill: rgb(128, 128, 128);
+    cursor: pointer;
+    transition: fill 0.2s ease-out;
+    margin: 0 0 0 15px;
+}
+
+.search:hover {
+    fill: rgb(255, 255, 255);
+}
+
+.profileBlock {
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    margin: 0 calc(65px) 0 0;
+}
+
+.tvBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    margin: 0 20px 0 0;
+    color: rgb(167,160,155);
+    fill: rgb(160,154,155);
+    cursor: pointer;
+}
+
+.tvBlock:hover {
+    fill: rgb(231,229,229);
+    color: rgb(231,229,229);
+}
+
+.computer {
+    margin: 0 10px 0 0;
+    fill: inherit;
+    transition: fill 0.2s ease-out;
+}
+
+.text {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: inherit;
+    transition: color 0.2s ease-out;
+}
+
+.childrenBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    margin: 0 20px 0 0;
+    color: rgb(167,160,155);
+    cursor: pointer;
+}
+
+.childrenBlock:hover {
+    color: rgb(231,229,229);
+}
+
+.childrenImage {
+    width: 28px;
+    height: 28px;
+    margin: 0 10px 0 0;
+    border-radius: 20px;
+    background-image: url("//avatars.mds.yandex.net/get-yapic/50595/qttNJcV5N5LfaATuyc2mUnyc8-1/80x80");
+    background-size: 28px;
+}
+
+.profileContainer {
+    background-image: url(https://yastatic.net/s3/kinopoisk-frontend/hd-www/release/_next/static/media/plus-m.bacc47fc.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.profileImage {
+    width: 40px;
+    height: 40px;
+    margin: 4px;
+    border-radius: 100px;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-image: url(https://yastatic.net/s3/kinopoisk-frontend/hd-www/release/_next/static/media/avatar-more-contrast.d02cd8d9.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
