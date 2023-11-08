@@ -50,14 +50,15 @@ export default function HomePage() {
                                 duration: .2,
                             }}
                         >
-                            <video src={require('../../video/trailer1.mp4')} className={styles.video} autoPlay muted onEnded={() => setIsShowTrailer(false)}/>
+                            <video src={require('../../video/trailer1.mp4')} className={styles.video} autoPlay muted onEnded={() => {setIsShowTrailer(false); setIsShowSecondTitleImage(false)}}/>
                         </motion.div>
                     }
                 </AnimatePresence>
                 
 
                 <div className={styles.backgroundGradient} />
-
+                
+                {!isShowSecondTitleImage &&
                 <div className={styles.trailerInfoBlock}>
                     <motion.div
                         initial={{opacity: 0}}
@@ -98,15 +99,16 @@ export default function HomePage() {
                         </motion.div>
                     </motion.div>
                 </div>
+                }
+                
 
-                {false &&
+                {isShowSecondTitleImage &&
                     <motion.div 
                         className={styles.secondTitleBlock}   
                         initial={{opacity: 0, y: 20}}
                         animate={{opacity: 1, y: 0}}
                         transition={{
                             duration: .2,
-                            delay: 1.5,
                         }}
                     >
                         <img src={require('../../images/title.webp')} style={{width: 400}} />
@@ -134,7 +136,7 @@ export default function HomePage() {
                         </p>
                     </BigBlackButton>
 
-                    <SmallBlackButton>
+                    <SmallBlackButton onClick={() => console.log('кликнул')}>
                         <svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" data-tid="Bookmark">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M28.05 13.5V9.3h4.575V5.7H28.05V1.125h-3.6V5.7h-4.2v3.6h4.2v4.2h3.6ZM11.475 5.625h4.275v3.6h-4.275v16.353l4.868-2.524 1.657-.86 1.657.86 4.868 2.524V18h3.6v13.5l-3.6-1.867L18 26.25l-6.525 3.383-3.6 1.867V5.625h3.6Z"></path>
                         </svg>

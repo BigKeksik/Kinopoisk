@@ -13,6 +13,7 @@ export default function SmallBlockSection() {
     const [isShowBlock, setIsShowBlock] = useState(false)
     const [isShowPreview, setIsShowPreview] = useState(false)
     const [isPreviewOpen, setIsPreviewOpen] = useState(false)
+    const [isMuteSound, setIsMuteSound] = useState(true)
     const show = useContext(IsShowPreviewContext)
 
     useEffect(() => {
@@ -103,7 +104,7 @@ export default function SmallBlockSection() {
                             className={styles.previewContainer}
                         >
                             <div className={styles.background}>
-                                <div className={styles.backgroundColor} />
+                                {/* <div className={styles.backgroundColor} /> */}
 
                                 <div className={styles.backgroundGradient} />
 
@@ -113,7 +114,25 @@ export default function SmallBlockSection() {
 
                                 <div className={styles.backgroundVideo}>
                                     <div className={[styles.setVideo, isShowVideo ? styles.opacity_1: styles.opacity_0].join(' ')} >
-                                        <video className={styles.video} src={require('../../../video/video3.mp4')} autoPlay muted onEnded={() => setIsShowVideo(false)} />
+                                        <video className={styles.video} src={require('../../../video/video3.mp4')} autoPlay muted={isMuteSound ? true : false} onEnded={() => setIsShowVideo(false)} />
+
+                                        <div className={styles.muteButton}>
+                                            <SmallBlackButton onClick={() => {setIsMuteSound(!isMuteSound)}}>
+                                                {isMuteSound && 
+                                                    <svg width="2.4rem" height="2.4rem" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-label="Включить звук" data-tid="VolumeMuted">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6 8.5 12.5 4v16L6 15.5H2.5v-7H6Zm10.393 7.493 2.296-2.296 2.296 2.296 1.698-1.697L20.386 12l2.297-2.296-1.698-1.697-2.296 2.296-2.296-2.296-1.697 1.697L16.992 12l-2.296 2.296 1.697 1.697Z" fill="#fff"></path>
+                                                    </svg>
+                                                }
+                                                
+                                                {!isMuteSound && 
+                                                    <svg width="2.4rem" height="2.4rem" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-label="Выключить звук" data-tid="VolumeUnmuted">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M24 12a11 11 0 0 1-4.219 8.672l-1.583-1.81A8.605 8.605 0 0 0 21.6 12c0-2.8-1.335-5.287-3.402-6.861l1.583-1.81A11 11 0 0 1 24 12Zm-4.722 0a6.288 6.288 0 0 1-2.614 5.108l-1.592-1.819a3.893 3.893 0 0 0 1.806-3.288c0-1.383-.72-2.597-1.806-3.289l1.592-1.82a6.288 6.288 0 0 1 2.614 5.109ZM6 8.5 12.5 4v16L6 15.5H2.5v-7H6Z" fill="#fff"></path>
+                                                    </svg>
+                                                }
+                                                
+                                            </SmallBlackButton>
+                                        </div>
+                                        
                                     </div>
 
                                     <div className={styles.noneVideo} />
