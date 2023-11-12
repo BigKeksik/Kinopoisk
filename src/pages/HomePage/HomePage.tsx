@@ -177,6 +177,14 @@ export default function HomePage() {
                 <SmallBlockSection />
                 <SmallBlockSection />
             </div>
+
+            <footer className={styles.footerContainer} data-tid="Footer">
+                <div className={styles.footerContent}>
+                    <p className={styles.text}>
+                        Footer
+                    </p>
+                </div>
+            </footer>
             
         </div>
     )

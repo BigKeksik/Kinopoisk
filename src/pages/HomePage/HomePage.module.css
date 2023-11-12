@@ -98,7 +98,7 @@
 }
 
 .content {
-    height: 200vh;
+    /* height: ; */
 }
 
 .continueBlock {
@@ -110,5 +110,17 @@
     border: 1px solid green;
     height: 300px;
 
+}
+
+.footerContainer {
+    height: 100px;
+    margin: 30px 0 0;
+    border-top: 1px solid rgba(128, 128, 128, .2)
+}
+
+.footerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
